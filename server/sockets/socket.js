@@ -1,4 +1,5 @@
 const { io } = require("../server");
+
 const { Usuarios } = require("../clases/usuarios");
 
 const usuarios = new Usuarios();
