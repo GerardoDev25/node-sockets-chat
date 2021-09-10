@@ -18,7 +18,7 @@ socket.on("connect", function () {
   });
 });
 
-// escuchar
+//? escuchar
 socket.on("disconnect", function () {
   console.log("Perdimos conexión con el servidor");
 });
@@ -35,12 +35,17 @@ socket.on("disconnect", function () {
 //   }
 // );
 
-// Escuchar información
+//? Escuchar información
 socket.on("crearMensaje", function (mensaje) {
   console.log("Servidor:", mensaje);
 });
 
-// Escuchar si un usuario se conecta y disconecta
+//? Escuchar si un usuario se conecta y disconecta
 socket.on("listaPersonas", function (personas) {
   console.log("Servidor:", personas);
+});
+
+// ? mensajes prvados
+socket.on("mensajePrivado", function (mensaje) {
+  console.log("mensaje privado: ", mensaje);
 });
