@@ -36,6 +36,11 @@ socket.emit(
 );
 
 // Escuchar información
-socket.on("enviarMensaje", function (mensaje) {
+socket.on("crearMensaje", function (mensaje) {
   console.log("Servidor:", mensaje);
+});
+
+// Escuchar si un usuario se conecta y disconecta
+socket.on("listaPersonas", function (personas) {
+  console.log("Servidor:", personas);
 });
